@@ -28,7 +28,7 @@ if e == 0:
 print("массив:", *A)
 
 
-
+# 1
 from random import randint
 A = [randint(0, 9) for x in range(6)]
 print(*A)
@@ -36,7 +36,7 @@ A = A[-1:] + A[:-1]
 print(*A)
 
 
-
+# 2
 from random import randint
 n = int(input())
 A = [randint(0, 9) for x in range(n)]
@@ -50,7 +50,7 @@ B.reverse()
 C.reverse()
 print(B+C)
 
-
+# 3
 from random import randint
 n = int(input())
 A = [randint(-100, 100) for x in range(n)]
