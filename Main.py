@@ -1,5 +1,5 @@
 
-
+# 1, 2, 3
 from random import randint
 A = [randint(0, 5) for x in range(5)]
 b = int(input())
