@@ -1,3 +1,13 @@
+# вводится число(int) выводится цифры этого числа
+a = int(input())
+A = []
+while a != 0:
+    b = a % 10
+    a = int((a - b) / 10)
+    A.append(b)
+A.reverse()
+print(*A)
+
 
 # 1.1, 1.2, 1.3
 from random import randint
@@ -49,6 +59,7 @@ print(*C)
 B.reverse()
 C.reverse()
 print(B+C)
+
 
 # 2.3
 from random import randint
