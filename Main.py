@@ -85,3 +85,34 @@ for i in range(n):
 print(*B)
 print(*C)
 print(*(B + C))
+
+
+# казик
+from random import randint
+a = int(input("введите целое число(для остановки введите 0):"))
+B = []
+balans = 100
+while a != 0 and balans > 10:
+    A = [randint(1, 10) for x in range(10)]
+    b = 0
+    c = 0
+    for i in range(10):
+        if A[i] == a:
+            print("элемент номер", i + 1, "=", a)
+            b += 1
+            balans += 10
+            print("победа +10руб")
+            print("баланс:", balans)
+            c += 1
+    if b == 0:
+        balans -= 50
+        print("проигрыш -50руб")
+        print("баланс:", balans)
+        c += 1
+    B.append(balans)
+
+    a = int(input("введите целое число(для остановки введите 0):"))
+
+if balans <= 10:
+    print("вы проиграли")
+    print("максимальный баланс:", max(B))
