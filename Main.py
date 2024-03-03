@@ -110,9 +110,7 @@ while a != 0 and balans > 10:
         print("баланс:", balans)
         c += 1
     B.append(balans)
-
     a = int(input("введите целое число(для остановки введите 0):"))
-
 if balans <= 10:
     print("вы проиграли")
     print("максимальный баланс:", max(B))
