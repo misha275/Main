@@ -110,3 +110,41 @@ while a != 0 and balans > 10:
 if balans <= 10:
     print("вы проиграли")
     print("максимальный баланс:", max(B))
+
+
+# игра номер 1
+n = int(input("введите количество ходов:"))
+print("1 - сотрудничать, 0 - предать")
+monA = 0
+monB = 0
+for i in range(1, n+1):
+    print("ход", i, "осталось ходов:", n - i)
+    a = int(input("выбор игрока 1:"))
+    b = int(input("выбор игрока 2:"))
+    if a == 0:
+        if b == 0:
+            monB += 1
+            monA += 1
+            print("очки игрока 1:", monA, "очки игрока 2:", monB)
+        elif b == 1:
+            monA += 5
+            monB += 0
+            print("очки игрока 1:", monA, "очки игрока 2:", monB)
+    elif a == 1:
+        if b == 0:
+            monB += 5
+            monA += 0
+            print("очки игрока 1:", monA, "очки игрока 2:", monB)
+        elif b == 1:
+            monA += 3
+            monB += 3
+            print("очки игрока 1:", monA, "очки игрока 2:", monB)
+if monA > monB:
+    print("победил игрок 1")
+    print("очки игрока 1:", monA, "очки игрока 2:", monB)
+elif monA == monB:
+    print("ничья")
+    print("очки игрока 1:", monA, "очки игрока 2:", monB)
+elif monA < monB:
+    print("победил игрок 2")
+    print("очки игрока 1:", monA, "очки игрока 2:", monB)
