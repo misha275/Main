@@ -73,10 +73,6 @@ A = [randint(-100, 100) for x in range(n)]
 print(*A)
 B = []
 C = []
-b = 0
-c = 0
-d = 1
-e = 1
 for i in range(n):
     if A[i] > 0:
         B.append(A[i])
