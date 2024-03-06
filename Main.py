@@ -162,16 +162,21 @@ print(b)
 
 # задача 2.2
 a = str(input())
-A =[]
+A = []
 b = 0
+summa = 0
 for x in a:
     A.append(x)
 for i in range(len(A)):
-    if A[i-1] == "+":
+    if A[i] != "+" and A[i] != "-":
+        b *= 10
         b += int(A[i])
-    elif A[i - 1] == "-":
-        b -= int(A[i])
-    elif A[i] == "+" or A[i] == "-":
-        continue
-print(b)
+    elif A[i] == "+":
+        summa += b
+        b = 0
+    elif A[i] == "-":
+        summa -= b
+        b = 0
+print(A, b)
+print(summa)
 
