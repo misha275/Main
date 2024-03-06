@@ -148,3 +148,13 @@ elif monA == monB:
 elif monA < monB:
     print("победил игрок 2")
     print("очки игрока 1:", monA, "очки игрока 2:", monB)
+
+
+# задача 2.1
+a = str(input())
+A = a.split("+")
+b = 0
+print(A)
+for i in range(int(len(A))):
+    b += int(A[i])
+print(b)
