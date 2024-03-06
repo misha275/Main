@@ -158,3 +158,20 @@ print(A)
 for i in range(int(len(A))):
     b += int(A[i])
 print(b)
+
+
+# задача 2.2
+a = str(input())
+A =[]
+b = 0
+for x in a:
+    A.append(x)
+for i in range(len(A)):
+    if A[i-1] == "+":
+        b += int(A[i])
+    elif A[i - 1] == "-":
+        b -= int(A[i])
+    elif A[i] == "+" or A[i] == "-":
+        continue
+print(b)
+
