@@ -162,22 +162,22 @@ print(b)
 
 # задача 2.2
 # p.s. она не работает(
-a = str(input())
-A = []
-b = 0
-summa = 0
-for x in a:
-    A.append(x)
-for i in range(len(A)):
-    if A[i] != "+" and A[i] != "-":
-        b *= 10
-        b += int(A[i])
-    elif A[i] == "+":
-        summa += b
-        b = 0
-    elif A[i] == "-":
-        summa -= b
-        b = 0
-print(A, b)
-print(summa)
+# a = str(input())
+# A = []
+# b = 0
+# summa = 0
+# for x in a:
+#     A.append(x)
+# for i in range(len(A)):
+#     if A[i] != "+" and A[i] != "-":
+#         b *= 10
+#         b += int(A[i])
+#     elif A[i] == "+":
+#         summa += b
+#         b = 0
+#     elif A[i] == "-":
+#         summa -= b
+#         b = 0
+# print(A, b)
+# print(summa)
 
