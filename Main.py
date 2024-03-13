@@ -182,10 +182,13 @@ print(b)
 # print(summa)
 
 
+# задача 3.1
 a = str(input())
 A = a.split(" ")
 print(A[0])
 
+
+# задача 3.2
 a = str(input())
 c = str(input())
 A = a.split(".")
