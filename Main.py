@@ -181,3 +181,23 @@ print(b)
 # print(A, b)
 # print(summa)
 
+
+a = str(input())
+A = a.split(" ")
+print(A[0])
+
+a = str(input())
+c = str(input())
+A = a.split(".")
+b = str()
+for i in range(len(A)):
+    if i == len(A)-1:
+        A.remove(A[i])
+        b += c
+    else:
+        b += A[i]
+        b += "."
+print(A)
+print(b)
+
+
