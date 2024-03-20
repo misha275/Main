@@ -251,13 +251,10 @@ fls.close()
 # задача 2
 fl = open("first_file.txt")
 s = fl.readlines()
-summa = 0
 A = []
 B = []
 for i in range(len(s)):
-    summa += int(s[i][:-1])
     A.append(int(s[i][:-1]))
-sr = str(summa/len(s))
 for j in range(len(A)):
     if A[j]%2 == 0 and A[j] >= 0:
         B.append(A[j])
