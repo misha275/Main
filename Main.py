@@ -211,4 +211,24 @@ print(b)
 # задача 5.1
 # есть алфавит из 4х букв на вход число - склько в слове букв    на выход - все комбинации и их количество
 # частично работает)
+n = int(input())
+A = ["Ш", "Ы", "Ч", "О"]
+s = str()
+b = 0
+for j in range(len(A)):
+    s += A[j]
+    for k in range(len(A)):
+        s += A[k]
+        for f in range(len(A)):
+            s += A[f]
+            for l in range(len(A)):
+                s += A[l]
+                if s[1:-2] == "Ы":
+                    print(s)
+                    b += 1
+                s = s[:-1]
+            s = s[:-1]
+        s = s[:-1]
+    s = s[:-1]
+print(b)
 
