@@ -232,3 +232,15 @@ for j in range(len(A)):
     s = s[:-1]
 print(b)
 
+# задачи на работу с файлами 
+# задача 1.1
+fl = open("first_file.txt")
+s = fl.readlines()
+summa = 0
+for i in range(len(s)):
+    summa += int(s[i][:-1])
+print(summa/len(s))
+print(s)
+fl1 = open("second_file.txt")
+fl1.write("summa/len(s)".format(summa, len(s), summa/len(s)))
+
