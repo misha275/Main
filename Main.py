@@ -239,8 +239,11 @@ s = fl.readlines()
 summa = 0
 for i in range(len(s)):
     summa += int(s[i][:-1])
-print(summa/len(s))
+sr = str(summa/len(s))
+print("среднее из всех чисел:", summa/len(s))
 print(s)
-fl1 = open("second_file.txt")
-fl1.write("summa/len(s)".format(summa, len(s), summa/len(s)))
+print(sr)
+fls = open("second_file.txt", "w")
+fls.write(sr)
+fls.close()
 
