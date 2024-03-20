@@ -269,3 +269,21 @@ fls.write('минимальное:')
 fls.write(mi)
 fls.close()
 
+
+# задача 3
+fl = open("first_file.txt")
+s = fl.readlines()
+A = []
+b = 0
+for i in range(len(s)):
+    A.append(int(s[i][:-1]))
+for j in range(len(A)):
+    if A[j] == A[j-1]:
+        b += 1
+print(b)
+fls = open("second_file.txt", "w")
+fls.write(str(b))
+fls.close()
+print(s)
+print(A)
+
