@@ -306,3 +306,33 @@ print(s)
 print(A)
 
 
+# не работает
+from math import fabs
+fl = open("first_file.txt")
+fls = open("second_file.txt", "w")
+s = fl.readlines()
+A = []
+B = []
+ma = 0
+sm = 0
+for i in range(len(s)):
+    A.append(int(s[i][:-1]))
+
+for k in range(len(A)):
+    for j in range(len(B)):
+        sm += int(B[j])
+    
+    for l in range(len(A)):
+        B = str(A[l]).split()
+
+        if sm > ma:
+            ma = A[l]
+            print(A[l])
+            fls.write(str(A[l]) + "\n")
+        elif sm == ma:
+            print()
+        sm = 0
+
+fls.close()
+print(s)
+print(A)
