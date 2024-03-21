@@ -248,7 +248,7 @@ fls.write(sr)
 fls.close()
 
 
-# задача 2
+# задача 1.2
 fl = open("first_file.txt")
 s = fl.readlines()
 A = []
@@ -270,7 +270,7 @@ fls.write(mi)
 fls.close()
 
 
-# задача 3
+# задача 1.3
 fl = open("first_file.txt")
 s = fl.readlines()
 A = []
@@ -286,4 +286,23 @@ fls.write(str(b))
 fls.close()
 print(s)
 print(A)
+
+
+# задача 2.1
+from math import fabs
+fl = open("first_file.txt")
+fls = open("second_file.txt", "w")
+s = fl.readlines()
+A = []
+for i in range(len(s)):
+    A.append(int(s[i][:-1]))
+for l in range(1, 10):
+    for j in range(len(A)):
+        if fabs(A[j]) % 10 == l:
+            print(A[j])
+            fls.write(str(A[j]) + "\n")
+fls.close()
+print(s)
+print(A)
+
 
