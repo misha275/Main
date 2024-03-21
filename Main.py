@@ -232,7 +232,12 @@ for j in range(len(A)):
     s = s[:-1]
 print(b)
 
-# задачи на работу с файлами 
+
+
+
+#                                                                     задачи на работу с файлами 
+
+
 # задача 1.1
 fl = open("first_file.txt")
 s = fl.readlines()
