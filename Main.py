@@ -357,3 +357,26 @@ for j in range(len(A)):
     A.remove(n)
     n = 1000
 print(*B)
+
+
+# сортирует половину массива по возростанию а вторую по убыванию
+from random import randint
+A = [randint(0, 9) for x in range(8)]
+print(*A)
+B = []
+C = []
+for i in range(len(A) // 2):
+    C.append(A[i])
+print(*C)
+for i in range(len(C)):
+    B.append(min(C))
+    C.remove(min(C))
+print(*B)
+for i in range(len(A) // 2):
+    C.append(A[i + len(A)//2])
+print(*C)
+for i in range(len(C)):
+    B.append(max(C))
+    C.remove(max(C))
+print(*B)
+
