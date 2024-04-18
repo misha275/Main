@@ -345,7 +345,7 @@ print(A)
 
 # сортировщик который сортирует массив из 6 случайных цифр в порядке возрастания
 from random import randint
-A = [randint(0, 9) for x in range(6)]
+A = [randint(0, 9) for x in range(8)]
 print(*A)
 B = []
 n = 1000
