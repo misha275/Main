@@ -380,3 +380,31 @@ for i in range(len(C)):
     C.remove(max(C))
 print(*B)
 
+
+# матрицы  
+# 1.1
+import random
+a = 0
+b = 1000
+A = []
+for x in range(4):
+    A.append([0]*4)
+for i in range(4):
+    for j in range(4):
+        A[i][j] = random.randint(10, 99)
+        if A[i][j] > a:
+            a = A[i][j]
+        if A[i][j] < b:
+            b = A[i][j]
+print(A)
+print(a)
+print(b)
+
+
+
+
+
+
+
+
+
