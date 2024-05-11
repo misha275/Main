@@ -430,7 +430,6 @@ for i in range(n):
 print(A)
 
 
-
 #задача 1
 from random import randint
 A = [randint(0, 9) for x in range(10)]
@@ -494,23 +493,34 @@ B = []
 C = []
 for i in range(len(A) // 2):
     C.append(A[i])
-print(*C)
-
 for i in range(len(C)):
     B.append(min(C))
     C.remove(min(C))
-print(*B)
-
 for i in range(len(A) // 2):
     C.append(A[i + len(A)//2])
-print(*C)
-
 for i in range(len(C)):
     B.append(min(C))
     C.remove(min(C))
 print(*B)
 
 
+
+#задача 6
+from random import randint
+A = [randint(0, 9) for x in range(9)]
+print(*A)
+print(*sorted(A))
+print(len(set(A)))
+
+
+
+#задача 7
+
+-
+
+#задача 8
+
+-
 
 # задача 9
 import random
@@ -560,3 +570,5 @@ for i in range(n):
         else:
             A[i][j] = 0
 print(A)
+
+
