@@ -385,7 +385,11 @@ print(*B)
 # 1.1
 import random
 a = 0
+ai = 0
+aj = 0
 b = 1000
+bi = 0
+bj = 0
 A = []
 for x in range(4):
     A.append([0]*4)
@@ -394,13 +398,36 @@ for i in range(4):
         A[i][j] = random.randint(10, 99)
         if A[i][j] > a:
             a = A[i][j]
+            ai = i              #костылизация)
+            aj = j
         if A[i][j] < b:
             b = A[i][j]
+            bi = i
+            bj = j
 print(A)
-print(a)
-print(b)
+print(a, " ", "[", ai, ",", aj, "]", sep="")
+print(b, " ", "[", bi, ",", bj, "]", sep="")
 
-
+#1.2
+import random
+n = int(input())
+A = []
+a = 0
+for x in range(n):
+    A.append([0]*n)
+for i in range(n):
+    for j in range(n):
+        A[i][j] = random.randint(0, 255)
+        a += A[i][j]
+print(A)
+print(a/n**2)
+for i in range(n):
+    for j in range(n):
+        if A[i][j] > a/n**2:
+            A[i][j] = 255
+        else:
+            A[i][j] = 0
+print(A)
 
 
 
