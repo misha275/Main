@@ -431,7 +431,132 @@ print(A)
 
 
 
+#задача 1
+from random import randint
+A = [randint(0, 9) for x in range(10)]
+print(*A)
+print("минимальный:", min(A))
+print("максимальный:", max(A))
+
+
+# задача 2
+from random import randint
+A = [randint(0, 9) for x in range(10)]
+print(*A)
+a = 0
+ai = 0
+for i in range(10):
+    if A[i] > a:
+        a = A[i]
+        ai = i
+A.remove(A[ai])
+print("максимальный 1: ", a, "[", ai, "]", sep="")
+a = 0
+for i in range(9):
+    if A[i] > a:
+        a = A[i]
+        ai = i
+print("максимальный 2: ", a, "[", ai, "]", sep="")
+
+
+#задача 3
+from random import randint
+n = int(input())
+A = [randint(-10, 10) for x in range(n)]
+print(*A)
+B = []
+for i in range(n):
+    if A[i] < 0 and A[i]%2 == 0:
+        B.append(A[i])
+print(*B)
+
+
+#задача 4
+from random import randint
+A = [randint(0, 100) for x in range(10)]
+print(*A)
+B = []
+for i in range(10):
+    k = 0
+    for j in range(2, A[i] // 2 + 1):
+        if (A[i] % j == 0):
+            k = k + 1
+    if k <= 0:
+        B.append(A[i])
+print(*B)
+
+
+#задача 5
+from random import randint
+A = [randint(0, 9) for x in range(8)]
+print(*A)
+B = []
+C = []
+for i in range(len(A) // 2):
+    C.append(A[i])
+print(*C)
+
+for i in range(len(C)):
+    B.append(min(C))
+    C.remove(min(C))
+print(*B)
+
+for i in range(len(A) // 2):
+    C.append(A[i + len(A)//2])
+print(*C)
+
+for i in range(len(C)):
+    B.append(min(C))
+    C.remove(min(C))
+print(*B)
 
 
 
+# задача 9
+import random
+a = 0
+ai = 0
+aj = 0
+b = 1000
+bi = 0
+bj = 0
+A = []
+for x in range(4):
+    A.append([0]*4)
+for i in range(4):
+    for j in range(4):
+        A[i][j] = random.randint(10, 99)
+        if A[i][j] > a:
+            a = A[i][j]
+            ai = i
+            aj = j
+        if A[i][j] < b:
+            b = A[i][j]
+            bi = i
+            bj = j
+print(A)
+print(a, " ", "[", ai, ",", aj, "]", sep="")
+print(b, " ", "[", bi, ",", bj, "]", sep="")
 
+
+
+# задача 10
+import random
+n = int(input())
+A = []
+a = 0
+for x in range(n):
+    A.append([0]*n)
+for i in range(n):
+    for j in range(n):
+        A[i][j] = random.randint(0, 255)
+        a += A[i][j]
+print(A)
+print(a/n**2)
+for i in range(n):
+    for j in range(n):
+        if A[i][j] > a/n**2:
+            A[i][j] = 255
+        else:
+            A[i][j] = 0
+print(A)
