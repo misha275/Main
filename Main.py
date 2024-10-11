@@ -572,3 +572,65 @@ for i in range(n):
 print(A)
 
 
+
+# практическая 40а
+# задача 1
+a = int(input())
+for i in range(1, (a//2)+1):
+    if a % i == 0:
+        print(i)
+print(a)
+
+# задача 2
+a = int(input())
+A = []
+for i in range(2, (a//2)+1):
+    if a % i == 0 and i != a:
+        A.append(i)
+if len(A) == 0:
+    print("число простое")
+else:
+    print("число не простое")
+
+# задача 3
+from random import randint
+a = int(input("число элементов массива:"))
+A = [randint(-100, 100) for x in range(a)]
+print(A)
+A.sort()
+print(A)
+print(A[0], A[1], A[2])
+
+# задача 4
+from random import randint
+a = int(input("число элементов массива:"))
+A = [randint(-100, 100) for x in range(a)]
+print(A)
+A.sort()
+print(A)
+print(A[0], A[1], A[2])
+
+# задача 5
+from random import randint
+a = int(input("число элементов массива:"))
+A = [randint(-100, 100) for x in range(a)]
+print(A)
+A.sort()
+n = 0
+for i in range(1, a):
+    if A[0] == A[i]:
+        n += 1
+print(A)
+print(A[0], A[1], A[2], n)
+
+# задача 6
+a = str(input())
+A = list(a)
+B = []
+print(*A)
+for i in range(1, len(a)+1):
+    for j in range(1, len(a)+1):
+        if A[i-1] == A[j-1] and i != j and A[i-1] not in B:
+            B.append(A[i-1])
+print(*B)
+
