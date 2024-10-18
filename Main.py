@@ -634,3 +634,14 @@ for i in range(1, len(a)+1):
             B.append(A[i-1])
 print(*B)
 
+
+# проверка всех чисел на простоту от 0 до n
+n = int(input())
+A = []
+for x in range(1, n):
+    for i in range(2, (x // 2) + 1):
+        if x % i == 0 and i != x:
+            A.append(i)
+    if len(A) == 0:
+        print(x)
+    A = []
