@@ -645,3 +645,63 @@ for x in range(1, n):
     if len(A) == 0:
         print(x)
     A = []
+
+
+#практическая №43 поляков
+# пункт 1
+# для работы необходим файл marks.csv
+class marks:
+    num = ''
+    surname = ''
+    name = ''
+    alg = ''
+    rus = ''
+    fiz = ''
+    hist = ''
+
+value = 1000   # количество строк в файле
+
+fl = open("marks.csv", "r")
+
+data = []
+for k in range(value):
+  data.append (marks())
+
+for i in range(value):
+    a = (fl.readline().split(","))
+    data[i].num = i
+    data[i].surname = a[0]
+    data[i].name = a[1]
+    data[i].alg = a[2]
+    data[i].rus = a[3]
+    data[i].fiz = a[4]
+    data[i].hist = a[5]
+
+al = 0
+rs = 0
+fz = 0
+ht = 0
+for l in range(value):
+    al += int(data[l].alg)
+    rs += int(data[l].rus)
+    fz += int(data[l].fiz)
+    ht += int(data[l].hist)
+print("среднее по", "\nалгебре:", al/1000,"\nрусскому:", rs/1000, "\nфизике:", fz/1000, "\nистории:",ht/1000)
+
+maxsum = []
+topsumname = []
+for g in range(value):
+    maxsum.append(int(data[g].alg)+int(data[g].rus)+int(data[g].fiz)+int(data[g].hist))
+mx = max(maxsum)
+print("максимальный результат", max(maxsum))
+
+for h in range(len(maxsum)):
+    if int(data[h].alg)+int(data[h].rus)+int(data[h].fiz)+int(data[h].hist) == mx:
+        topsumname.append(data[h].name)
+print("максимальный результат у:", *sorted(topsumname))
+
+loxi = 0
+for t in range(value):
+    if int(data[t].alg) == 2 or int(data[t].rus) == 2 or int(data[t].fiz) == 2 or int(data[t].hist) == 2:
+        loxi += 1
+print("получивших отметку 2:", loxi)
