@@ -17,3 +17,12 @@ def per(sch, ss1, ss2):
         vr1 //= int(ss2)
     vr2 = vr2[::-1]
     return vr2
+
+# проверяет является ли число простым
+def prost(a):
+    b = 0
+    for k in range(1, int(a)):
+        if a%k == 0:
+            b += 1
+    if b <= 1:
+        return a
