@@ -705,3 +705,36 @@ for t in range(value):
     if int(data[t].alg) == 2 or int(data[t].rus) == 2 or int(data[t].fiz) == 2 or int(data[t].hist) == 2:
         loxi += 1
 print("получивших отметку 2:", loxi)
+
+
+
+
+# попытка создать ужас из 22 задания
+class poc:
+    id = int()
+    vr = int()
+    n1 = int()
+    n2 = int()
+    
+a = poc()
+fl = open('22.csv', 'r')
+
+for i in fl:
+    d = i.split(',')
+    d[2] = d[2][0:-1]
+    a.id = d[0]
+    a.vr = d[1]
+    
+    if d[2] != 0:
+        d1 = str(d[2]).split(';')
+    else:
+        d1 = 0
+
+    if len(d1) > 1:
+        a.n1 = d1[0]
+        a.n2 = d1[1]
+    else:
+        a.n1 = d1[0]
+        a.n2 = 0
+    print(a.id, a.vr, a.n1, a.n2)
+    
