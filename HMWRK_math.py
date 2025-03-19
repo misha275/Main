@@ -1,3 +1,13 @@
+# номер 1
+for i in range(10, 1000):
+    a = i
+    b = int(str(i)[-1] + str(i)[:-1])
+    if a % 2 == 0 and a % 5 != 0 and b % 2 != 0 and b % 5 == 0:
+        print(a)
+        break
+# ответ: 52
+
+
 
 # номер 5
 import math
