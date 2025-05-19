@@ -738,3 +738,28 @@ for i in fl:
         a.n2 = 0
     print(a.id, a.vr, a.n1, a.n2)
     
+# дз задание 25
+def d(a):
+    k = 0
+    for i in range(2, a, 2):
+        if a%i == 0:
+            k+=1
+    return k
+def s(a):
+    s = 0
+    for i in range(2, a, 2):
+        if a%i == 0:
+            s += i
+    return s
+for i in range(65000, 10**9):
+    a = str(i)
+    if a[0] == '6' and a[-2] == '5' and  '97' in a:
+        if d(i) >= 4:
+            print(i, s(i))
+# 69750 60042
+# 69752 52328
+# 69756 69780
+# 609750 493482
+# 609752 681496
+# 609756 916932
+# 619750 186458
